@@ -1,0 +1,11 @@
+<div class="tablero">
+    <div *ngFor="let fila of tablero" class="fila">
+      <div *ngFor="let casilla of fila" 
+           class="casilla" 
+           [ngClass]="tablero[casilla.fila][casilla.columna].color"
+           (click)="casillaSeleccionada(casilla.fila, casilla.columna ,casilla.estado)">
+           <ficha [ficha]=casilla.estado></ficha>
+      </div>
+    </div>
+  </div>
+  
